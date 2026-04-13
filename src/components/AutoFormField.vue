@@ -80,6 +80,23 @@ const isArray = computed(() => props.field.type === 'array' && props.field.schem
     />
   </fieldset>
 
+  <!-- Boolean fields (checkbox with inline label) -->
+  <div v-else-if="field.type === 'boolean'" class="autoform-field autoform-field--boolean">
+    <label class="autoform-checkbox-label">
+      <component
+        :is="fieldComponent"
+        :field="field"
+        :model-value="modelValue"
+        :error="error"
+        :input-props="field.fieldConfig?.inputProps"
+        @update:model-value="emit('update:modelValue', $event)"
+      />
+      <span>{{ label }}</span>
+    </label>
+    <p v-if="description" class="autoform-description">{{ description }}</p>
+    <p v-if="error" class="autoform-error">{{ error }}</p>
+  </div>
+
   <!-- Regular fields -->
   <div v-else class="autoform-field">
     <label class="autoform-label">

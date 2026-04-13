@@ -141,6 +141,14 @@ defineExpose({ values, errors, isSubmitting, reset })
   accent-color: #3b82f6;
 }
 
+.autoform-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .autoform-error {
   font-size: 13px;
   color: #ef4444;
