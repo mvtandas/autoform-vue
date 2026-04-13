@@ -1,5 +1,5 @@
 {
-  "name": "@autoform/vue",
+  "name": "@mvtandas/autoform-vue",
   "version": "1.0.0",
   "description": "Automatically render forms from your Zod/Yup schema in Vue 3 — the missing Vue integration for AutoForm",
   "keywords": [
