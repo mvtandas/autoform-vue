@@ -1,0 +1,55 @@
+{
+  "name": "@autoform/vue",
+  "version": "1.0.0",
+  "description": "Automatically render forms from your Zod/Yup schema in Vue 3 — the missing Vue integration for AutoForm",
+  "keywords": [
+    "vue",
+    "vue3",
+    "autoform",
+    "form",
+    "zod",
+    "schema",
+    "auto-form",
+    "form-generator",
+    "typescript",
+    "composition-api"
+  ],
+  "author": "Mustafa Vatandas <mvtandas@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mvtandas/autoform-vue"
+  },
+  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/autoform-vue.umd.cjs",
+  "module": "./dist/autoform-vue.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/autoform-vue.js",
+      "require": "./dist/autoform-vue.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "build": "vite build && tsc -p tsconfig.build.json",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@autoform/core": "^3.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@autoform/zod": "^5.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "typescript": "^5.4.0",
+    "vite": "^6.0.0",
+    "vue": "^3.5.0",
+    "vue-tsc": "^2.0.0",
+    "zod": "^3.23.0"
+  }
+}
