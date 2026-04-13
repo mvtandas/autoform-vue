@@ -49,7 +49,10 @@ const label = computed(() => {
 
 const description = computed(() => {
   const desc = props.field.fieldConfig?.description ?? props.field.description
-  return typeof desc === 'string' ? desc : undefined
+  if (typeof desc !== 'string') return undefined
+  // Don't show description if it's the same as the label
+  if (desc === label.value) return undefined
+  return desc
 })
 
 const isObject = computed(() => props.field.type === 'object' && props.field.schema)
